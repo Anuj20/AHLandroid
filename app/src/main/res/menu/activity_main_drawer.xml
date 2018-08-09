@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:title="Policies">
+        <menu>
+            <group android:checkableBehavior="single">
+
+                <item
+                    android:id="@+id/nav_AddLICPolicy"
+                    android:icon="@drawable/ic_add_box_black_24dp"
+                    android:title="Add LIC Policy" />
+                <item
+                    android:id="@+id/nav_listLICPolicy"
+                    android:icon="@drawable/ic_list_black_24dp"
+                    android:title="LIC Policies" />
+                <item
+                    android:id="@+id/nav_AddGeneralPolicy"
+                    android:icon="@drawable/ic_add_box_black_24dp"
+                    android:title="Add General Policy" />
+
+                <item
+                    android:id="@+id/nav_listGeneralPolicy"
+                    android:icon="@drawable/ic_list_black_24dp"
+                    android:title="General Policies" />
+
+
+            </group>
+        </menu>
+    </item>
+
+    <item android:title="Property">
+        <menu>
+            <group android:checkableBehavior="single">
+
+                <item
+                    android:id="@+id/nav_AddProperty"
+                    android:icon="@drawable/ic_add_box_black_24dp"
+                    android:title="Add Property" />
+                <item
+                    android:id="@+id/nav_listProperty"
+                    android:icon="@drawable/ic_search_black_24dp"
+                    android:title="Search Property" />
+
+
+            </group>
+        </menu>
+    </item>
+
+    <item android:title="Pollution">
+        <menu>
+            <group android:checkableBehavior="single">
+
+                <item
+                    android:id="@+id/nav_AddPollution"
+                    android:icon="@drawable/ic_add_box_black_24dp"
+                    android:title="Add Certificate" />
+                <item
+                    android:id="@+id/nav_listPollution"
+                    android:icon="@drawable/ic_list_black_24dp"
+                    android:title="Pollution Certificates" />
+
+
+            </group>
+        </menu>
+    </item>
+
+    <item android:title="Doctor">
+        <menu>
+            <group android:checkableBehavior="single">
+
+                <item
+                    android:id="@+id/nav_AddApp"
+                    android:icon="@drawable/ic_menu_camera"
+                    android:title="Doctor Appointment" />
+                <item
+                    android:id="@+id/nav_viewAppiontment"
+                    android:icon="@drawable/ic_menu_gallery"
+                    android:title="View Appointment" />
+
+
+            </group>
+        </menu>
+    </item>
+
+    <item android:title="Investment">
+        <menu>
+            <group android:checkableBehavior="single">
+
+                <item
+                    android:id="@+id/nav_currency"
+                    android:icon="@drawable/ic_monetization_on_black_24dp"
+                    android:title="Currencies Rate" />
+                <item
+                    android:id="@+id/nav_ipo"
+                    android:icon="@drawable/ic_description_black_24dp"
+                    android:title="IPO News" />
+
+
+            </group>
+        </menu>
+    </item>
+    <item android:title="Communicate">
+        <menu>
+            <item
+                android:id="@+id/nav_share"
+                android:icon="@drawable/ic_menu_share"
+                android:title="Share" />
+            <item
+                android:id="@+id/nav_apply"
+                android:icon="@drawable/ic_menu_send"
+                android:title="Apply Now" />
+
+            <item
+                android:id="@+id/nav_contact"
+                android:icon="@drawable/ic_contact_phone_black_24dp"
+                android:title="Contact Us" />
+            <item
+                android:id="@+id/nav_about"
+                android:icon="@drawable/ic_insert_comment_black_24dp"
+                android:title="About Us" />
+        </menu>
+    </item>
+
+</menu>

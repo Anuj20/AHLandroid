@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "265192329513",
+    "firebase_url": "https://amit-helpline-3ce82.firebaseio.com",
+    "project_id": "amit-helpline-3ce82",
+    "storage_bucket": "amit-helpline-3ce82.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:265192329513:android:1954efa93bd6170d",
+        "android_client_info": {
+          "package_name": "com.amithelpline.ahl"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "265192329513-0p21s0qf72uknbk30dlqk70aamumft8p.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.amithelpline.ahl",
+            "certificate_hash": "2ee1a05411abab0c0149f13db664a0b3a4857c2a"
+          }
+        },
+        {
+          "client_id": "265192329513-aj9ed6ginkt68vuk48o5om3n8b2s8kkr.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAhak3Ex1B0UUKwLFT70qBFtwDFCZoikng"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "265192329513-aj9ed6ginkt68vuk48o5om3n8b2s8kkr.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -1,0 +1,86 @@
+<resources>
+    <string name="app_name">Amit Helpline</string>
+
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="action_logout">Logout</string>
+    <string name="action_profile">Profile</string>
+
+    <string name="name">Name</string>
+    <string name="email">Email</string>
+    <string name="mobileno">Mobile No</string>
+    <string name="password">Password</string>
+    <string name="new_password">New Password</string>
+    <string name="confirmpass">Confirm Password</string>
+    <string name="dob">Date of Birth</string>
+    <string name="register">Register</string>
+    <string name="update">Update</string>
+    <string name="login">Login</string>
+    <string name="save">Save</string>
+    <string name="forgot">Forgot Password?</string>
+    <string name="update_password">Update Password</string>
+    <string name="apply">Apply Now</string>
+    <string name="www">www.amithelpline.com</string>
+    <string name="emailaddress">amit_helpline@yahoo.co.in</string>
+    <string name="whatsapp">9416079953</string>
+    <string name="fburl">https://www.facebook.com/Ahlgroup/</string>
+    <string name="life_insurance">Life Insurance</string>
+    <string name="general_insurance">General Insurance</string>
+    <string name="policy_no">Policy No</string>
+    <string name="preimum_amt">Preimum Amount</string>
+    <string name="preimum_due_date">Preimum Due Date</string>
+    <string name="certificate_expire_date">Certificate Expire Date</string>
+    <string name="description">Description</string>
+    <string name="quarterly">Quarterly</string>
+    <string name="half_yearly">Half Yearly</string>
+    <string name="yearly">Yearly</string>
+    <string name="monthly">Monthly</string>
+    <string name="comment">Comment</string>
+    <string name="vote">Vote</string>
+
+    <string name="err_msg_name">Enter your full name</string>
+    <string name="err_msg_email">Invalid Email</string>
+    <string name="err_msg_mobile">Invalid Mobile Number</string>
+    <string name="err_msg_password">Invalid Password</string>
+    <string name="err_msg_policy_no">Invalid Policy No</string>
+    <string name="err_msg_policy_amt">Invalid Policy Amount</string>
+    <string name="err_msg_policy_due_date">Invalid Policy Due Date</string>
+    <string name="err_msg_select_vehicle">Select Vehicle</string>
+    <string name="err_msg_vehicle_number">Invalid Vehicle Number</string>
+    <string name="err_msg_due_date">Invalid Due Date</string>
+
+    <string name="select_vehicle">Select Option</string>
+    <string name="vehicle_no">Vehicle Number</string>
+
+    <string name="commercial">Commercial</string>
+    <string name="residental">Residential</string>
+    <string name="contact_person">Contact Person</string>
+    <string name="address">Address</string>
+    <string name="city">City</string>
+    <string name="size">Size</string>
+    <string name="rent">Rent</string>
+
+    <string name="select_doctor">Select Doctor</string>
+    <string name="appointment_date">Appointment Date</string>
+    <string name="appointment_time">Appointment Time</string>
+    
+    <string name="lic">LIC</string>
+    <string name="motor_insurance">Motor Insurance</string>
+    <string name="health_insurance">Health Insurance</string>
+    <string name="personal_accident">Personal Accident Insurance</string>
+    <string name="mutual_fund">Mutual Fund</string>
+    <string name="ipo">IPO</string>
+    <string name="car_loan">Car Loan</string>
+    <string name="home_loan">Home Loan</string>
+    <string name="tour_travel">Tour and Travel</string>
+
+    <string name="failed_connect_network">No Internet Connection!!</string>
+
+
+
+
+
+
+
+
+</resources>
