@@ -2,7 +2,9 @@ package com.amithelpline.ahl.activity;
 
 import android.content.Intent;
 import android.content.SharedPreferences;
+import android.os.AsyncTask;
 import android.os.Bundle;
+import android.os.Handler;
 import android.support.design.widget.NavigationView;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentTransaction;
@@ -14,6 +16,10 @@ import android.support.v7.widget.Toolbar;
 import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.ImageView;
+import android.widget.Toast;
+import android.widget.ViewFlipper;
 
 import com.amithelpline.ahl.R;
 import com.amithelpline.ahl.fragment.AddGeneralPolicyFragment;
@@ -38,8 +44,7 @@ import com.google.android.gms.ads.AdRequest;
 import com.google.android.gms.ads.AdView;
 import com.google.android.gms.ads.MobileAds;
 
-public class MainActivity extends AppCompatActivity
-        implements NavigationView.OnNavigationItemSelectedListener, HomeFragment.OnGridMenuClickListener {
+public class MainActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener, HomeFragment.OnGridMenuClickListener {
     public HomeFragment mHomeFragment;
     private AdView mAdView;
 
@@ -83,6 +88,7 @@ public class MainActivity extends AppCompatActivity
         setSupportActionBar(toolbar);
         MobileAds.initialize(this, "ca-app-pub-5057880724201581~2555112164");
         mAdView = (AdView) findViewById(R.id.adView);
+
         //.addTestDevice("07A2BBA833B555F7B7AB34144CE6BB00")
         AdRequest adRequest = new AdRequest.Builder().build();
         mAdView.loadAd(adRequest);
@@ -95,7 +101,6 @@ public class MainActivity extends AppCompatActivity
         NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
         initDashboardFragment();
-
 
     }
 
