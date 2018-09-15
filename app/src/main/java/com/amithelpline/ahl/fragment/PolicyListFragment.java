@@ -35,9 +35,7 @@ import java.util.List;
 
 import static android.content.Context.MODE_PRIVATE;
 
-/**
- * Created by Neeraj on 26-04-2017.
- */
+
 
 public class PolicyListFragment extends Fragment {
     RecyclerView recyclerView;
@@ -49,7 +47,6 @@ public class PolicyListFragment extends Fragment {
     AVLoadingIndicatorView avLoadingIndicatorView;
     SharedPreferences mSharedPreferences;
     EditText etSearch;
-
 
     @Override
     public void onViewCreated(View view, @Nullable Bundle savedInstanceState) {
@@ -119,8 +116,6 @@ public class PolicyListFragment extends Fragment {
                         @Override
                         public void onSuccess(JSONObject jsonObject) {
                             try {
-
-
                                 Log.e("RESPONSE", jsonObject.toString());
 
                                 if (jsonObject.getBoolean("status")) {

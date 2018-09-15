@@ -37,9 +37,6 @@ import java.util.List;
 
 import static android.content.Context.MODE_PRIVATE;
 
-/**
- * Created by Neeraj on 26-04-2017.
- */
 
 public class PolicyGeneralListFragment extends Fragment {
     RecyclerView recyclerView;
@@ -50,6 +47,7 @@ public class PolicyGeneralListFragment extends Fragment {
     AVLoadingIndicatorView avLoadingIndicatorView;
     SharedPreferences mSharedPreferences;
     EditText etSearch;
+    String Mobile;
 
 
     @Override
@@ -67,7 +65,7 @@ public class PolicyGeneralListFragment extends Fragment {
 
         mSharedPreferences = getActivity().getSharedPreferences(Const.SHAREDPREFERENCE, MODE_PRIVATE);
         UserId = mSharedPreferences.getString(Const.UserId, "0");
-
+        Mobile = mSharedPreferences.getString(Const.Mobile, "0");
         recyclerView = (RecyclerView) view.findViewById(R.id.recycler_view);
         avLoadingIndicatorView = (AVLoadingIndicatorView) view.findViewById(R.id.loader);
         policyList = new ArrayList<>();
@@ -113,6 +111,7 @@ public class PolicyGeneralListFragment extends Fragment {
             public void run() {
                 try {
                     String RegParmeter = "api_get_general_policies.php?user_id=" + UserId;
+                    //String RegParmeter = "api_get_general_policies.php?mobile=" + Mobile;
                     String PolicyUrl = ApiConfig.BASE_URL + RegParmeter;
                     Log.e("Url", PolicyUrl);
                     new ApiConnection().connect(new OnApiResponseListener() {
@@ -131,7 +130,7 @@ public class PolicyGeneralListFragment extends Fragment {
                                         policy = new PolicyGeneral(jsn.getString("policy_id"),
                                                 jsn.getString("vehicleno"), jsn.getString("premium_duedate"),
                                                 jsn.getString("premium_amount"), jsn.getString("policy_no"), jsn.getString("policy_type"));
-Log.e("here","here");
+                                        Log.e("here","here");
                                         policyList.add(policy);
                                     }
 

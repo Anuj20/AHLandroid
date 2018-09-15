@@ -66,11 +66,10 @@ public class PolicyGeneralAdapter extends RecyclerView.Adapter<PolicyGeneralAdap
                 @Override
                 public void onClick(View view) {
                     policy = policyList.get(getAdapterPosition());
-                    String Url = "http://stylenada.in/amit_helpline/admin/policiespdf/" + policy.getPolicyNo() + ".pdf";
+                    String Url = "http://ec2-13-126-178-19.ap-south-1.compute.amazonaws.com/policiespdf/" + policy.getPolicyNo() + ".pdf";
                     mContext.startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse(Url)));
                 }
             });
-
         }
     }
 
@@ -100,8 +99,6 @@ public class PolicyGeneralAdapter extends RecyclerView.Adapter<PolicyGeneralAdap
         holder.tvPreimumAmt.setText(policy.getPreimumAmt());
         holder.tvPreimumDate.setText(policy.getPreimumDate());
         holder.tvPolicyType.setText(policy.getPolicyType());
-
-
     }
 
     @Override

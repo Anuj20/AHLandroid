@@ -8,7 +8,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- * Created by Neeraj Rathi on 2/4/2016.
+ * Created by ALISHA on 12/9/2018.
  */
 public class GridMenuModel {
     public static final String DAILY_BONUS="Policy";
