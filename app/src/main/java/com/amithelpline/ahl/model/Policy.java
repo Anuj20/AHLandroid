@@ -6,21 +6,24 @@ package com.amithelpline.ahl.model;
 
 public class Policy {
 
-    private String PolicyId, Name, PreimumDate, PreimumAmt, PolicyNo, PolicyMode;
+    private String PolicyId, Name,PremiumStartDate, PreimumDate, PreimumAmt, PolicyNo, PolicyMode;
 
 
     public Policy() {
     }
 
-    public Policy(String PolicyId, String Name, String PreimumDate, String PreimumAmt, String PolicyNo, String PolicyMode) {
+    public Policy(String PolicyId, String Name,String PremiumStartDate, String PreimumDate, String PreimumAmt, String PolicyNo, String PolicyMode) {
         this.PolicyId = PolicyId;
         this.Name = Name;
+        this.PremiumStartDate=PremiumStartDate;
         this.PreimumDate = PreimumDate;
         this.PreimumAmt = PreimumAmt;
         this.PolicyNo = PolicyNo;
         this.PolicyMode = PolicyMode;
 
     }
+
+
 
     public String getPolicyId() {
         return PolicyId;
@@ -38,6 +41,13 @@ public class Policy {
         this.Name = Name;
     }
 
+    public String getPremiumStartDate() {
+        return PremiumStartDate;
+    }
+
+    public void setPremiumStartDate(String premiumStartDate) {
+        PremiumStartDate = premiumStartDate;
+    }
     public String getPreimumDate() {
         return PreimumDate;
     }

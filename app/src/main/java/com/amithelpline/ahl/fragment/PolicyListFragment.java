@@ -124,6 +124,7 @@ public class PolicyListFragment extends Fragment {
                                         JSONObject jsn = jsonArray.getJSONObject(i);
 
                                         policy = new Policy(jsn.getString("policy_id"),jsn.getString("name"),
+                                                jsn.getString("premium_startdate"),
                                                 jsn.getString("premium_duedate"),
                                                 jsn.getString("premium_amount"), jsn.getString("policy_no"), jsn.getString("premium_mode"));
 

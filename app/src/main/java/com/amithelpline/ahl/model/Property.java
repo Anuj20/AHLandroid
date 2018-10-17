@@ -6,9 +6,10 @@ package com.amithelpline.ahl.model;
 
 public class Property {
 
-    private String Name, Address, Address1, City, Size, Rent, UserId;
+    private String PropertyID, Name, Address, Address1, City, Size, Rent, UserId;
 
-    public Property(String Name, String Address, String Address1, String City, String Size, String Rent, String UserId) {
+    public Property(String PropertyID,String Name, String Address, String Address1, String City, String Size, String Rent, String UserId) {
+        this.PropertyID=PropertyID;
         this.Name = Name;
         this.Address = Address;
         this.Address1 = Address1;
@@ -17,7 +18,12 @@ public class Property {
         this.Rent = Rent;
         this.UserId = UserId;
     }
-
+    public String getPropertyID(){
+        return PropertyID;
+    }
+    public String setPropertyID(String PropertyID){
+        return PropertyID;
+    }
     public String getName() {
         return Name;
     }
