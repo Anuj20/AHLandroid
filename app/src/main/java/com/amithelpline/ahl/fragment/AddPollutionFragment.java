@@ -29,6 +29,7 @@ import com.amithelpline.ahl.api.ApiConfig;
 import com.amithelpline.ahl.api.ApiConnection;
 import com.amithelpline.ahl.api.OnApiResponseListener;
 import com.amithelpline.ahl.utils.Const;
+import com.google.android.gms.ads.MobileAds;
 import com.weiwangcn.betterspinner.library.material.MaterialBetterSpinner;
 
 import org.json.JSONException;
@@ -47,8 +48,8 @@ import static android.content.Context.MODE_PRIVATE;
 public class AddPollutionFragment extends Fragment {
 
     TextInputLayout inputLayoutDueDate, inputLayoutVehicleNo;
-    EditText etDueDate, etVehicleNumber, etDescription;
-    String DueDate, UserId, VehicleNumber, Description;
+    EditText etDueDate, etVehicleNumber, etModelname;
+    String DueDate, UserId, VehicleNumber, Modelname, Mobile, Name;
     Button btnAddPollution;
     Calendar myCalendar;
     SharedPreferences mSharedPreferences;
@@ -60,6 +61,8 @@ public class AddPollutionFragment extends Fragment {
         View view = inflater.inflate(R.layout.fragment_add_pollution, container, false);
         mSharedPreferences = getActivity().getSharedPreferences(Const.SHAREDPREFERENCE, MODE_PRIVATE);
         UserId = mSharedPreferences.getString(Const.UserId, "0");
+        Mobile = mSharedPreferences.getString(Const.Mobile,"0").trim();
+        Name = mSharedPreferences.getString(Const.Name,"0").trim();
 
 
         inputLayoutDueDate = (TextInputLayout) view.findViewById(R.id.input_layout_DueDate);
@@ -67,7 +70,7 @@ public class AddPollutionFragment extends Fragment {
 
         etVehicleNumber = (EditText) view.findViewById(R.id.etVehicleNo);
         etDueDate = (EditText) view.findViewById(R.id.etDate);
-        etDescription = (EditText) view.findViewById(R.id.etDescription);
+        etModelname = (EditText) view.findViewById(R.id.etModelname);
 
 
         btnAddPollution = (Button) view.findViewById(R.id.btnSave);
@@ -77,10 +80,10 @@ public class AddPollutionFragment extends Fragment {
 
 
                 String VehNo = etVehicleNumber.getText().toString().toUpperCase();
-                VehicleNumber = VehNo.replaceAll(" ", "");
+                VehicleNumber = VehNo.replaceAll(" ", "").trim();
                 Log.e("Vehicle", VehicleNumber);
                 DueDate = etDueDate.getText().toString();
-                Description = etDescription.getText().toString();
+                Modelname = etModelname.getText().toString().trim();
 
 
                 if (!validateVehicleNumber()) {
@@ -150,7 +153,7 @@ public class AddPollutionFragment extends Fragment {
             @Override
             public void run() {
                 try {
-                    String Parameter = "api_add_pollution.php?vehicleno=" + VehicleNumber + "&user_id=" + UserId + "&pollution_due_date=" + DueDate + "&desc=" + Description;
+                    String Parameter = "api_add_pollution.php?name="+Name+"&mobile="+Mobile+"&vehicleno=" + VehicleNumber + "&user_id=" + UserId + "&pollution_due_date=" + DueDate + "&modelname=" + Modelname;
                     String Url = ApiConfig.BASE_URL + Parameter;
                     Log.e("Url", Url);
                     new ApiConnection().connect(new OnApiResponseListener() {
@@ -162,7 +165,7 @@ public class AddPollutionFragment extends Fragment {
 
                                 if (jsonObject.getBoolean("status")) {
                                     Toast.makeText(getActivity(), jsonObject.getString("msg"), Toast.LENGTH_SHORT).show();
-etDescription.setText("");
+etModelname.setText("");
                                     etDueDate.setText("");
                                     etVehicleNumber.setText("");
                                 } else {

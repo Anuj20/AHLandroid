@@ -65,7 +65,21 @@
                     android:inputType="number"
                     android:maxLines="1" />
             </android.support.design.widget.TextInputLayout>
+            <android.support.design.widget.TextInputLayout
+                android:id="@+id/input_layout_StartDate"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin20">
 
+                <EditText
+                    android:id="@+id/etPremiumStartDate"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:focusable="false"
+                    android:hint="Premium Start Date"
+                    android:inputType="date"
+                    android:maxLines="1" />
+            </android.support.design.widget.TextInputLayout>
             <android.support.design.widget.TextInputLayout
                 android:id="@+id/input_layout_DueDate"
                 android:layout_width="match_parent"

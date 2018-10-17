@@ -38,39 +38,104 @@
                 android:layout_marginBottom="@dimen/margin10"
                 android:layout_marginEnd="@dimen/margin10"
                 android:src="@drawable/iconpdf" />
-
+            <ImageView
+                android:id="@+id/ivDelete"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/ivEdit"
+                android:layout_alignParentEnd="true"
+                android:layout_marginTop="@dimen/margin10"
+                android:layout_marginBottom="@dimen/margin10"
+                android:layout_marginEnd="@dimen/margin10"
+                android:src="@drawable/delete_btn" />
+            <Button
+                android:id="@+id/ivPaid"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="paid"
+                android:layout_below="@+id/ivDelete"
+                android:layout_alignParentLeft="true"
+                android:layout_marginTop="@dimen/margin10"
+                android:layout_marginBottom="@dimen/margin10"
+                android:layout_marginEnd="@dimen/margin10"
+                android:src="@drawable/delete_btn" />
             <LinearLayout
+                android:id="@+id/lin_lay"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:orientation="vertical">
-
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textStyle="bold"
+                    android:text="Name:"/>
                 <TextView
                     android:id="@+id/tvName"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:textSize="@dimen/textsize20"
                     android:textStyle="bold" />
-
-
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Policy Number:"/>
                 <TextView
                     android:id="@+id/tvPolicyNo"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:textSize="@dimen/textsize20" />
+                     />
 
-
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Policy Amount:"/>
                 <TextView
                     android:id="@+id/tvAmount"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:textSize="@dimen/textsize20" />
-
+                     />
+            </LinearLayout>
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Start Date:"/>
+                    <TextView
+                        android:id="@+id/tvStartDate"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                         />
+                </LinearLayout>
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Due Date:"/>
                 <TextView
                     android:id="@+id/tvDate"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:textSize="@dimen/textsize20" />
-
+                     />
+            </LinearLayout>
             </LinearLayout>
         </RelativeLayout>
     </android.support.v7.widget.CardView>

@@ -47,15 +47,15 @@ import java.util.Locale;
 import static android.content.Context.MODE_PRIVATE;
 
 /**
- * Created by Neeraj on 22-03-2017.
+ * Created by Alisha on 14-10-18.
  */
 
 public class AddLICPolicyFragment extends Fragment {
 
-    TextInputLayout inputLayoutName, inputLayoutPolicyNo, inputLayoutPremiumAmt, inputLayoutPreDate;
+    TextInputLayout inputLayoutName, inputLayoutPolicyNo, inputLayoutPremiumAmt, inputLayoutPreDate, getInputLayoutStartDate;
     RadioGroup rdgPolicyMode;
     RadioButton rdbYearly, rdbHalfYearly, rdbQtr;
-    EditText etName, etPolicyNo, etPremiumAmt, etPremiumDueDate;
+    EditText etName, etPolicyNo, etPremiumAmt, etPremiumDueDate,etPremiumStartDate;
     String Name, PolicyNo, PremiumAmt, PremiumDate, UserId, PremiumMode;
     Button btnAddPolicy;
     Calendar myCalendar;
@@ -75,12 +75,13 @@ public class AddLICPolicyFragment extends Fragment {
         inputLayoutPolicyNo = (TextInputLayout) view.findViewById(R.id.input_layout_PolicyNo);
         inputLayoutPremiumAmt = (TextInputLayout) view.findViewById(R.id.input_layout_PremiumAmt);
         inputLayoutPreDate = (TextInputLayout) view.findViewById(R.id.input_layout_DueDate);
-        // inputLayoutVehicleType = (TextInputLayout) view.findViewById(R.id.input_layout_Vehicle);
+         getInputLayoutStartDate= (TextInputLayout) view.findViewById(R.id.input_layout_StartDate);
 
         etName = (EditText) view.findViewById(R.id.etName);
         etPolicyNo = (EditText) view.findViewById(R.id.etPolicyNo);
         etPremiumAmt = (EditText) view.findViewById(R.id.etPremiumAmount);
         etPremiumDueDate = (EditText) view.findViewById(R.id.etPremiumDueDate);
+        etPremiumStartDate = (EditText)view.findViewById(R.id.input_layout_StartDate);
         // etVehicleType = (EditText) view.findViewById(R.id.etVehicle);
 
         rdbYearly = (RadioButton) view.findViewById(R.id.rdbYearly);

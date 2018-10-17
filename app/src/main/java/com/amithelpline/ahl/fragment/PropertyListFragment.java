@@ -35,7 +35,7 @@ import java.util.List;
 import static android.content.Context.MODE_PRIVATE;
 
 /**
- * Created by Neeraj on 26-04-2017.
+ * Created by Alisha on 14-10-2018.
  */
 
 public class PropertyListFragment extends Fragment {
@@ -98,7 +98,7 @@ public class PropertyListFragment extends Fragment {
                                     for (int i = 0; i < jsonArray.length(); i++) {
                                         JSONObject jsn = jsonArray.getJSONObject(i);
 
-                                        property = new Property(jsn.getString("name"),
+                                        property = new Property(jsn.getString("property_id"),jsn.getString("name"),
                                                 jsn.getString("address"), jsn.getString("address1"), jsn.getString("city"),
                                                 jsn.getString("rent"), jsn.getString("size"), jsn.getString("userid"));
 
